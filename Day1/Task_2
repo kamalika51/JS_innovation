@@ -1,0 +1,16 @@
+let num=234;
+let str="hello js";
+
+let str1="2915";
+let str_num=Number(str1);
+console.log(typeof str_num);
+
+let num1=2915;
+let num_str=String(num1);
+console.log(typeof num_str);
+
+let a="15"*2;
+console.log(a);
+
+let b="29"+2;
+console.log(b);

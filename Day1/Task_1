@@ -1,0 +1,10 @@
+var name = "Kamalika";
+let age = 17;
+const state = "TamilNadu";
+
+console.log("Name:",name);
+console.log("Age:",age);
+console.log("State:",state);
+
+age = 18;
+console.log("My modification age:");
