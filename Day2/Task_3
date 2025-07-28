@@ -1,0 +1,24 @@
+console.log("=== Task 3: Break and Continue ===");
+
+console.log("Finding the first prime number between 2 and 20:");
+for (let num = 2; num <= 20; num++) {
+  let isPrime = true;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+  if (isPrime) {
+    console.log("First prime number found:", num);
+    break;
+  }
+}
+
+console.log("Odd numbers between 1 and 20:");
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 === 0) {
+    continue;
+  }
+  console.log(i);
+}
