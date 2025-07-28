@@ -1,0 +1,17 @@
+function greetUser() {
+  const message = "Hello, welcome to JavaScript functions!";
+  console.log(message);
+}
+
+function sumArguments() {
+  let total = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    total += arguments[i];
+  }
+  console.log("Sum using 'arguments' object:", total);
+}
+
+function sumRest(...numbers) {
+  const total = numbers.reduce((acc, curr) => acc + curr, 0);
+  console.log("Sum using '...rest' operator:", total);
+}
