@@ -1,0 +1,23 @@
+let value = Math.random() * 200;
+let ceilNum = Math.ceil(3.3);
+let floorNum = Math.floor(3.9);
+let dataSet = [9, 81, 42, 63];
+let lowest = Math.min(...dataSet);
+let highest = Math.max(...dataSet);
+
+let phrase = "Learning JavaScript Now";
+let big = phrase.toUpperCase();
+let small = phrase.toLowerCase();
+let cut = phrase.substring(9, 19);
+let findWord = phrase.includes("Script");
+let changed = phrase.replace("Now", "Quickly");
+
+console.log(value);
+console.log(ceilNum);
+console.log(floorNum);
+console.log(lowest, highest);
+console.log(big);
+console.log(small);
+console.log(cut);
+console.log(findWord);
+console.log(changed);

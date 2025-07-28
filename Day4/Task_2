@@ -1,0 +1,16 @@
+let days = [1, 2, 3, 4, 5];
+let names = ["Ajay", "Bala", "Charu"];
+
+days[3] = 40;
+names[0] = "Arjun";
+
+let len = days.length;
+
+days.push(6);
+days.pop();
+days.shift();
+days.unshift(0);
+
+console.log(days);
+console.log(names);
+console.log(len);

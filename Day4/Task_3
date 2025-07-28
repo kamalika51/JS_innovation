@@ -1,0 +1,14 @@
+let items = [7, 14, 21, 28];
+
+items.forEach((item) => console.log("Val:", item));
+
+let triple = items.map((n) => n * 3);
+console.log(triple);
+
+for (let i in items) {
+  console.log("Index is", i);
+}
+
+for (let v of items) {
+  console.log("Looped value:", v);
+}
