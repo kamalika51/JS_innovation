@@ -1,29 +1,24 @@
-let numbers = [5, 12, 8, 130, 44];
-let filtered = numbers.filter(num => num > 10);
-console.log("Filtered (numbers > 10):", filtered);
+const arr=[23,4,5,6,29,15,8,44]
 
-let nums = [1, 2, 3, 4, 5];
+//for each
+arr.forEach((x)=>{console.log(x)})
 
-let sum = nums.reduce((total, num) => total + num, 0);
-console.log("Sum:", sum);
+//filter 
+let filter_array=arr.filter((x)=>x%2==0)
+console.log(filter_array)
 
-let product = nums.reduce((total, num) => total * num, 1);
-console.log("Product:", product);
+//reduce
 
-let words = ['Hello', ' ', 'World', '!'];
-let sentence = words.reduce((acc, word) => acc + word);
-console.log("Concatenated String:", sentence);
+let sum=arr.reduce((acc,val)=>acc+val)
+console.log(sum)
+ 
+//slice
+let slice_copy=arr.slice(2,5+1)
+console.log(slice_copy)
 
-
-let fruits = ['apple', 'banana', 'cherry', 'date', 'fig'];
-let sliced = fruits.slice(1, 4);
-console.log("Sliced Fruits (index 1 to 3):", sliced);
-console.log("Original Fruits Array:", fruits);  // unchanged
-
-
-let colors = ['red', 'green', 'blue', 'yellow'];
-colors.splice(2, 1, 'purple', 'orange');  // remove 1 at index 2, add 2
-console.log("Modified Colors (with splice):", colors);
+//splice->remove
+arr.splice(3,5 )
+console.log(arr)
 
 let original = [1, 2, 3];
 let cloned = [...original];
