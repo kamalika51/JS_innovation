@@ -1,0 +1,35 @@
+let numbers = [5, 12, 8, 130, 44];
+let filtered = numbers.filter(num => num > 10);
+console.log("Filtered (numbers > 10):", filtered);
+
+let nums = [1, 2, 3, 4, 5];
+
+let sum = nums.reduce((total, num) => total + num, 0);
+console.log("Sum:", sum);
+
+let product = nums.reduce((total, num) => total * num, 1);
+console.log("Product:", product);
+
+let words = ['Hello', ' ', 'World', '!'];
+let sentence = words.reduce((acc, word) => acc + word);
+console.log("Concatenated String:", sentence);
+
+
+let fruits = ['apple', 'banana', 'cherry', 'date', 'fig'];
+let sliced = fruits.slice(1, 4);
+console.log("Sliced Fruits (index 1 to 3):", sliced);
+console.log("Original Fruits Array:", fruits);  // unchanged
+
+
+let colors = ['red', 'green', 'blue', 'yellow'];
+colors.splice(2, 1, 'purple', 'orange');  // remove 1 at index 2, add 2
+console.log("Modified Colors (with splice):", colors);
+
+let original = [1, 2, 3];
+let cloned = [...original];
+console.log("Cloned Array:", cloned);
+
+let arr1 = [1, 2];
+let arr2 = [3, 4];
+let merged = [...arr1, ...arr2];
+console.log("Merged Arrays:", merged);
