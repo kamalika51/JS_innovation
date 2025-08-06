@@ -1,0 +1,28 @@
+const person={
+    name:"kamali",
+    age:18,
+  
+};
+
+const { name,age } =person;
+console.log(name);
+console.log(age);
+
+const user = { id: 1, info: { city: "Chennai" } };
+const {
+  info: { city = "Unknown" } = {}
+} = user;
+console.log(city);
+
+
+const obj1 = { a: 1 };
+const clone = { ...obj1 };
+console.log(clone); 
+const obj2 = { b: 2 };
+const merged = { ...obj1, ...obj2 };
+console.log(merged); 
+
+const persons = { name: "kamali", details: { ages: 18 } };
+const { name:kamali, details: { ages= 18 } } = persons;
+const extended = { ...persons, city: "nambiyur" };
+console.log(name, age, extended);
