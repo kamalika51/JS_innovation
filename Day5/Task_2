@@ -1,0 +1,21 @@
+const student = {
+    name:"Kamalika Bala Subramaniyam",
+    age:17,
+    displayInfo:function()
+    {
+        console.log(`Name : ${this.name},Age:${this.age}`);
+    }
+}
+student.displayInfo();
+
+
+student.currentAge= function(newAge){
+    this.age=newAge
+}
+
+student.currentAge(18);
+student.displayInfo();
+
+student.name="Kamalika KB";
+console.log(student.name);
+
