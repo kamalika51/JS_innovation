@@ -1,3 +1,11 @@
 const numbers = [5, 12, 8, 130, 44];
 const result = numbers.filter(num => num > 10);
+
 console.log(result); 
+
+1. filter() returns new array with matching items
+2. reduce()  combines all values into one
+3. slice() copies part of an array without changing it
+   splice() changes the array by adding/removing elements
+4. spread operator is used to copy, expand, or merge arrays and objects
+5. methodName: function()
