@@ -1,0 +1,28 @@
+
+const user = {
+  id: 123,
+  name: 'Kamali',
+  address: {
+    city: 'Erode',
+    zip: '2915'
+  }
+};
+
+
+const { name, address: { city } } = user;
+console.log(name); 
+console.log(city); 
+
+console.log(user.name);           
+console.log(user['address']['zip']); 
+
+
+
+for (const key in user) {
+  console.log(key, user[key]); 
+}
+
+
+Object.keys(user).forEach(key => {
+  console.log(key, user[key]);
+});

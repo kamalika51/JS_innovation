@@ -1,0 +1,2 @@
+How do you destructure an object with nested properties?
+By unpacking values directly from inside another object using curly braces with the property path.

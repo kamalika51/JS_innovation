@@ -1,0 +1,16 @@
+const users = [
+  { id: 1, name: "Bob" },
+  { id: 2, name: "Sue" }
+];
+users.forEach(user => console.log(user.id, user.name));
+
+
+function registerUser(id, ...otherDetails) {
+  return { id, details: otherDetails };
+}
+console.log(registerUser(5, "Sam", "NY", "Admin"));
+
+
+const moreUsers = [{ id: 3, name: "Ann" }];
+const combined = [...users, ...moreUsers];
+console.log(combined);

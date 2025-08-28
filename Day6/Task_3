@@ -1,0 +1,17 @@
+function greet() {
+  console.log("Hello, " + this.name);
+}
+const person = { name: "Greg" };
+
+
+greet.call(person); 
+
+
+function introduce(role, city) {
+  console.log(${this.name} is a ${role} from ${city});
+}
+introduce.apply(person, ["Designer", "Paris"]);
+
+
+const boundGreet = greet.bind(person);
+boundGreet();
