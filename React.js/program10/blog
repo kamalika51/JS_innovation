@@ -1,0 +1,112 @@
+main.jsx
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import App from './App.jsx'
+import Home from './Home.jsx'
+import Post from './Post.jsx'
+
+
+createRoot(document.getElementById('root')).render(
+  <BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/post/:id" element={<Post />} />
+  </Routes>
+</BrowserRouter>,
+  <Home></Home>,
+  <Post></Post>
+)
+
+
+Home.jsx
+
+import React from "react";
+import { Link } from "react-router-dom";
+
+function Home() {
+  const posts = [
+    {
+      id: 1,
+      title: "React Information",
+      content: "React is a JavaScript library used to build fast and interactive user interfaces."
+    },
+  ];
+
+  return (
+    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+      <h1>Mini Blog - Home</h1>
+      <p>Select a blog post to view the full article</p>
+
+      {posts.map((post) => (
+        <div
+          key={post.id}
+          style={{
+            padding: "20px",
+            marginBottom: "20px",
+            borderRadius: "12px",
+            background: "linear-gradient(135deg,#e8f0ff,#f2f7ff)",
+            border: "1px solid #cdd9f0",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+          }}
+        >
+          <h2 style={{ margin: "0 0 10px 0", color: "#1a3d7c" }}>
+            <Link
+              to={`/post/${post.id}`}
+              style={{ textDecoration: "none", color: "#1a3d7c" }}
+            >
+              {post.title}
+            </Link>
+          </h2>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default Home;
+
+
+post.jsx
+
+import React from "react";
+import { useParams, Link } from "react-router-dom";
+
+function Post() {
+  const { id } = useParams();
+
+  const posts = [
+    {
+      id: 1,
+      title: "React Information",
+      content: "React is a JavaScript library developed by Facebook to build fast and interactive user interfaces."
+    },
+  ];
+
+  const post = posts.find((p) => p.id === parseInt(id));
+
+  if (!post) {
+    return (
+      <h2 style={{ padding: "20px", fontFamily: "Arial" }}>
+        Post not found
+      </h2>
+    );
+  }
+
+  return (
+    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+      <Link to="/" style={{ textDecoration: "none", color: "#1a3d7c" }}>
+        ← Back to Home
+      </Link>
+
+      <h1 style={{ marginTop: "20px", color: "#8a5400" }}>
+        {post.title}
+      </h1>
+
+      <p>{post.content}</p>
+    </div>
+  );
+}
+
+export default Post;
