@@ -27,3 +27,35 @@ createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </StrictMode>
 );
+
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+function Home() {
+  return (
+    <div>
+      <p>Click here to go to the page post</p>
+      {/* Navigation link to the /post route */}
+      <Link to="/post">Go</Link>
+    </div>
+  );
+}
+
+export default Home;
+
+
+import React from 'react';
+
+function Post() {
+  return (
+    <div>
+      <h1>Post Page</h1>
+      {/* Content for the post would go here */}
+    </div>
+  );
+}
+
+export default Post;
+
